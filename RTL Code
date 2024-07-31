@@ -4,6 +4,7 @@ module onehot_to_bin (
     );
     
     always@(i_onehot) begin
+        o_bin = 4'b0000;
         case (1'b1)
             i_onehot[0] : o_bin = 4'b0001;
             i_onehot[1] : o_bin = 4'b0010;
