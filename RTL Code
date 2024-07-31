@@ -1,19 +1,21 @@
 module onehot_to_bin (
-    input  [7:0] i_onehot,
-    output reg [3:0] o_bin
+    input  [9:0] i_onehot,
+    output reg [4:0] o_bin
     );
     
     always@(i_onehot) begin
         o_bin = 4'b0000;
         case (1'b1)
-            i_onehot[0] : o_bin = 4'b0001;
-            i_onehot[1] : o_bin = 4'b0010;
-            i_onehot[2] : o_bin = 4'b0011;
-            i_onehot[3] : o_bin = 4'b0100;
-            i_onehot[4] : o_bin = 4'b0101;
-            i_onehot[5] : o_bin = 4'b0110;
-            i_onehot[6] : o_bin = 4'b0111;
-            i_onehot[7] : o_bin = 4'b1000;
+            i_onehot[0] : o_bin = 4'b0000;
+            i_onehot[1] : o_bin = 4'b0001;
+            i_onehot[2] : o_bin = 4'b0010;
+            i_onehot[3] : o_bin = 4'b0011;
+            i_onehot[4] : o_bin = 4'b0100;
+            i_onehot[5] : o_bin = 4'b0101;
+            i_onehot[6] : o_bin = 4'b0110;
+            i_onehot[7] : o_bin = 4'b0111;
+            i_onehot[8] : o_bin = 4'b1000;
+            i_onehot[9] : o_bin = 4'b1001;
         endcase
     end
     
